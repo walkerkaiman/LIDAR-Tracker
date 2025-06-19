@@ -91,12 +91,16 @@ python3 main.py
 
 ## 🛠️ Troubleshooting
 
-- 🔌 **LIDAR not detected?** Check `lidar_port` in `config.json`
-- ❌ **Permission denied?** Add user to `dialout` group:
-  ```bash
-  sudo usermod -aG dialout $USER
-  ```
-- 🕳 **No blobs?** Adjust `cluster_eps` and `cluster_min_samples`
+| Problem                               | Fix                                                                              |
+| ------------------------------------- | -------------------------------------------------------------------------------- |
+| **LIDAR not detected**                | Check that `lidar_port` in `config.json` is correct (`/dev/ttyUSB0` is typical). |
+| **Permission denied**                 | Run `sudo usermod -aG dialout $USER` and restart your session.                   |
+| **No blobs detected**                 | Try lowering `cluster_min_samples` or increasing `cluster_eps`.                  |
+| **Too many blobs or noise**           | Decrease `cluster_eps` or increase `cluster_min_samples`.                        |
+| **OSC messages not showing in Unity** | Double-check `osc_target_ip` and `osc_target_port` in `config.json`.             |
+| **Low performance**                   | Try lowering `frame_rate_limit`.                                                 |
+| **Snapshots not saving**              | Make sure `snapshot_dir` exists and is writable.                                 |
+| **Want fewer points in each blob**    | Increase `cluster_eps` or decrease `cluster_min_samples`.                        |
 
 ---
 
