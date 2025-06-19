@@ -1,0 +1,15 @@
+{
+  "lidar_port": "/dev/ttyUSB0",
+  "baud_rate": 256000,
+
+  "osc_target_ip": "192.168.1.100",
+  "osc_target_port": 9000,
+  "osc_enabled": true,
+
+  "frame_rate_limit": 10,
+
+  "cluster_eps": 300.0,
+  "cluster_min_samples": 5,
+
+  "snapshot_dir": "snapshots"
+}

@@ -1,0 +1,5 @@
+open3d
+numpy
+scikit-learn
+python-osc
+pyrplidar
